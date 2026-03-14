@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Biplov Singh — Data Science & Machine Learning Developer. Building end-to-end ML pipelines, NLP systems, and data-driven solutions." />
+  <meta name="keywords" content="Biplov Singh, Data Science, Machine Learning, NLP, PyTorch, Python, Portfolio" />
+  <meta name="author" content="Biplov Singh" />
+  <title>Biplov Singh | Data Science &amp; ML Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ────────────────────────── NAVBAR ────────────────────────── -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>biplov<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="resume.pdf" class="btn btn-outline btn-sm" target="_blank" rel="noopener">
+          <i class="fas fa-download"></i> Resume
+        </a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ────────────────────────── HERO ────────────────────────── -->
+    <section class="hero section" id="home">
+      <div class="hero-bg">
+        <div class="grid-overlay"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content" data-aos="fade-up">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for opportunities
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Biplov Singh</span>
+          </h1>
+
+          <div class="hero-typewriter">
+            <span class="typewriter-prefix">I build </span>
+            <span class="typewriter" id="typewriter"></span>
+          </div>
+
+          <p class="hero-sub">
+            Data Science &amp; Machine Learning developer specializing in end-to-end ML pipelines,
+            NLP systems, and data-driven solutions. Transforming raw data into meaningful insights.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-rocket"></i> View My Work
+            </a>
+            <a href="resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+              <i class="fas fa-file-alt"></i> Download Resume
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">ML Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-left">
+          <div class="code-window">
+            <div class="window-bar">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="window-title">biplov_singh.py</span>
+            </div>
+            <div class="code-content">
+              <pre><code><span class="kw">class</span> <span class="cls">BiplovSingh</span>:
+  <span class="kw">def</span> <span class="fn">__init__</span>(<span class="var">self</span>):
+    <span class="var">self</span>.name    <span class="op">=</span> <span class="str">"Biplov Singh"</span>
+    <span class="var">self</span>.domain  <span class="op">=</span> <span class="str">"biplovsingh.dev"</span>
+    <span class="var">self</span>.focus   <span class="op">=</span> [
+      <span class="str">"Machine Learning"</span>,
+      <span class="str">"Deep Learning / NLP"</span>,
+      <span class="str">"Data Engineering"</span>,
+    ]
+    <span class="var">self</span>.stack   <span class="op">=</span> {
+      <span class="str">"lang"</span>: <span class="str">"Python,C,C++"</span>,
+      <span class="str">"data"</span>: <span class="str">"Pandas,Numpy"</span>,
+      <span class="str">"viz"</span>: <span class="str">"Matplotlib,Seaborn"</span>,
+      <span class="str">"dl"</span>:   <span class="str">"PyTorch"</span>,
+      <span class="str">"db"</span>:   <span class="str">"MySQL / MongoDB"</span>,
+      <span class="str">"os"</span>:   <span class="str">"Linux / Ubuntu"</span>,
+      <span class="str">"other"</span>: <span class="str">"Git,Docker"</span>,
+    }
+
+  <span class="kw">def</span> <span class="fn">available</span>(<span class="var">self</span>):
+    <span class="kw">return</span> <span class="bool">True</span>  <span class="cmt"># open to work!</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ────────────────────────── ABOUT ────────────────────────── -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">01. about</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-sub">The story behind the code</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text" data-aos="fade-right">
+            <p class="about-lead">
+              I'm a Data Science student with a passion for turning complex data into intelligent,
+              real-world solutions.
+            </p>
+            <p>
+              My journey into machine learning started with a curiosity about how computers can learn
+              patterns from data — and it quickly became an obsession. I specialize in building
+              <strong>end-to-end machine learning pipelines</strong>, from raw data collection and
+              preprocessing through model training, evaluation, and deployment.
+            </p>
+            <p>
+              I'm equally comfortable wrangling messy datasets, fine-tuning transformer models for NLP,
+              designing efficient SQL schemas, or spinning up experiments in a Linux terminal. I believe
+              great ML engineering is as much about robust infrastructure as it is about model accuracy.
+            </p>
+            <p>
+              Beyond core data science, I have a growing interest in
+              <strong>cybersecurity and penetration testing</strong> — understanding how systems
+              can be attacked helps me build more secure and resilient data applications.
+            </p>
+
+            <div class="about-info-grid">
+              <div class="info-item">
+                <i class="fas fa-graduation-cap"></i>
+                <div>
+                  <span class="info-label">Education</span>
+                  <span class="info-value">Data Science (Student)</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Jamshedpur, Jharkhand</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fab fa-linux"></i>
+                <div>
+                  <span class="info-label">Environment</span>
+                  <span class="info-value">Linux / Ubuntu</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-globe"></i>
+                <div>
+                  <span class="info-label">Website</span>
+                  <span class="info-value">biplovsingh.dev</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual" data-aos="fade-left">
+            <div class="about-card-stack">
+              <div class="about-avatar-card">
+                <div class="avatar-placeholder">
+                  <i class="fas fa-user-circle"></i>
+                  <p class="avatar-hint">Add your photo here</p>
+                </div>
+              </div>
+              <div class="floating-badge badge-pytorch">
+                <i class="fas fa-fire"></i> PyTorch
+              </div>
+              <div class="floating-badge badge-linux">
+                <i class="fab fa-linux"></i> Linux
+              </div>
+              <div class="floating-badge badge-python">
+                <i class="fab fa-python"></i> Python
+              </div>
+            </div>
+
+            <div class="terminal-snippet">
+              <div class="window-bar mini">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="window-title">terminal</span>
+              </div>
+              <div class="terminal-body">
+                <p><span class="t-prompt">biplov@dev</span><span class="t-sep">:</span><span class="t-path">~/projects</span> <span class="t-dollar">$</span> python train.py</p>
+                <p class="t-out">Epoch 1/10 — loss: 0.4231 — acc: 0.8740</p>
+                <p class="t-out">Epoch 5/10 — loss: 0.1823 — acc: 0.9310</p>
+                <p class="t-out">Epoch 10/10 — loss: 0.0944 — acc: 0.9680</p>
+                <p class="t-success">✓ Model saved → ./models/best.pt</p>
+                <p><span class="t-prompt">biplov@dev</span><span class="t-sep">:</span><span class="t-path">~/projects</span> <span class="t-dollar">$</span> <span class="t-cursor">█</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── SKILLS ────────────────────────── -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">02. skills</span>
+          <h2 class="section-title">Tech Stack</h2>
+          <p class="section-sub">Tools and technologies I work with</p>
+        </div>
+
+        <div class="skills-categories" data-aos="fade-up">
+
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-code"></i>
+              <h3>Core Languages</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-chip skill-primary">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+                <div class="skill-level expert">Expert</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-database"></i>
+                <span>SQL (MySQL)</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-terminal"></i>
+                <span>Bash / Shell</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-brain"></i>
+              <h3>ML &amp; Deep Learning</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-chip skill-primary">
+                <i class="fas fa-fire"></i>
+                <span>PyTorch</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-robot"></i>
+                <span>Machine Learning</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-network-wired"></i>
+                <span>Deep Learning</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-comments"></i>
+                <span>NLP / Transformers</span>
+                <div class="skill-level learning">Learning</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-chart-bar"></i>
+              <h3>Data &amp; Visualization</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-chip">
+                <i class="fas fa-table"></i>
+                <span>Pandas / NumPy</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-chart-line"></i>
+                <span>Matplotlib / Seaborn</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-chart-pie"></i>
+                <span>Data Visualization</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="category-header">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Systems &amp; Security</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-chip">
+                <i class="fab fa-linux"></i>
+                <span>Linux / Ubuntu</span>
+                <div class="skill-level proficient">Proficient</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-user-secret"></i>
+                <span>Cybersecurity</span>
+                <div class="skill-level learning">Learning</div>
+              </div>
+              <div class="skill-chip">
+                <i class="fas fa-search"></i>
+                <span>Penetration Testing</span>
+                <div class="skill-level learning">Learning</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="skills-legend" data-aos="fade-up">
+          <span><span class="legend-dot expert"></span> Expert</span>
+          <span><span class="legend-dot proficient"></span> Proficient</span>
+          <span><span class="legend-dot learning"></span> Learning</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── PROJECTS ────────────────────────── -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">03. projects</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-sub">A selection of my most impactful work</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Aspect Pulse -->
+          <article class="project-card project-featured" data-aos="fade-up">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-comments-dollar"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-number">01</span>
+                <span class="project-badge badge-featured">Featured</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Aspect Pulse</h3>
+              <p class="project-tagline">Aspect-Based Sentiment Analysis (ABSA) System</p>
+              <p class="project-desc">
+                A fine-grained sentiment analysis system that goes beyond document-level polarity.
+                Aspect Pulse identifies specific <strong>aspects</strong> (e.g., battery life, camera,
+                performance) within product reviews and assigns independent sentiment scores to each.
+                Built with transformer-based NLP models and a structured data pipeline.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Fine-grained aspect extraction from unstructured text</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Transformer-based sentiment classification per aspect</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>End-to-end preprocessing, training, and inference pipeline</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Evaluation on benchmark ABSA datasets</span>
+                </div>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Transformers</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">ABSA</span>
+                <span class="tech-tag">Hugging Face</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="#" class="project-link" aria-label="GitHub repository">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="project-link project-link-demo" aria-label="Live demo">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </article>
+
+          <!-- Reddit Sentiment Analysis -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fab fa-reddit-alien"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-number">02</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Reddit Sentiment Pipeline</h3>
+              <p class="project-tagline">Public Opinion Mining &amp; Data Engineering</p>
+              <p class="project-desc">
+                A scalable data pipeline that ingests Reddit posts via the PRAW API, processes
+                and cleans the raw text, applies sentiment analysis models, and stores structured
+                results in a relational database — surfacing trends in public opinion over time.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Reddit API (PRAW) data ingestion and filtering</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Text preprocessing and sentiment scoring pipeline</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>MySQL database storage with structured schema</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Trend visualization and subreddit comparison</span>
+                </div>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PRAW</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">VADER</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Matplotlib</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="#" class="project-link" aria-label="GitHub repository">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="project-link project-link-demo" aria-label="Live demo">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </article>
+
+          <!-- Movie Recommendation System -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-header">
+              <div class="project-icon">
+                <i class="fas fa-film"></i>
+              </div>
+              <div class="project-meta">
+                <span class="project-number">03</span>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3 class="project-title">Movie Recommendation System</h3>
+              <p class="project-tagline">Hybrid ML-Powered Recommendation Engine</p>
+              <p class="project-desc">
+                A hybrid recommendation engine combining collaborative filtering, content-based
+                filtering, and matrix factorization techniques to generate personalized movie
+                suggestions. Evaluated on the MovieLens dataset with multiple ranking metrics.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Collaborative & content-based filtering combined</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Matrix factorization with SVD decomposition</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Evaluation with RMSE, Precision@K, and NDCG metrics</span>
+                </div>
+                <div class="highlight-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Interactive query interface for personalized results</span>
+                </div>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">SVD</span>
+                <span class="tech-tag">MovieLens</span>
+                <span class="tech-tag">NumPy</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="#" class="project-link" aria-label="GitHub repository">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="project-link project-link-demo" aria-label="Live demo">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-cta" data-aos="fade-up">
+          <p>More projects on GitHub</p>
+          <a href="https://github.com/biplovsingh" class="btn btn-outline" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> View All Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ────────────────────────── CONTACT ────────────────────────── -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">04. contact</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-sub">Have a project in mind? Let's talk.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info pane -->
+          <div class="contact-info" data-aos="fade-right">
+            <p class="contact-lead">
+              I'm currently open to new opportunities, collaborations, and interesting projects.
+              Whether you have a question, a proposal, or just want to say hi — my inbox is always open.
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:biplov@biplovsingh.dev" class="contact-link">
+                <div class="contact-icon-wrap">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="cl-label">Email</span>
+                  <span class="cl-value">biplov@biplovsingh.dev</span>
+                </div>
+              </a>
+
+              <a href="https://github.com/biplovsingh" class="contact-link" target="_blank" rel="noopener">
+                <div class="contact-icon-wrap">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div>
+                  <span class="cl-label">GitHub</span>
+                  <span class="cl-value">github.com/biplovsingh</span>
+                </div>
+              </a>
+
+              <a href="https://linkedin.com/in/biplovsingh" class="contact-link" target="_blank" rel="noopener">
+                <div class="contact-icon-wrap">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div>
+                  <span class="cl-label">LinkedIn</span>
+                  <span class="cl-value">linkedin.com/in/biplovsingh</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+                <span class="form-error" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <span class="form-error" id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading" hidden><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+            </button>
+            <div class="form-success" id="formSuccess" hidden>
+              <i class="fas fa-check-circle"></i>
+              Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ────────────────────────── FOOTER ────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>biplov<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span>
+        </a>
+        <p>Building intelligent systems, one model at a time.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com/biplovsingh" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/biplovsingh" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:biplov@biplovsingh.dev" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="year"></span> Biplov Singh &bull; biplovsingh.dev &bull;
+        Designed &amp; built with <i class="fas fa-heart" style="color: var(--accent);"></i>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
