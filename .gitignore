@@ -1,0 +1,18 @@
+#os files
+.DS_store
+Thumb.db
+desktop.ini
+
+#Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+#Secrets / env (if you ever add env)
+.env
+.env.local
+
+#Resume
+
+resume.pdf
