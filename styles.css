@@ -1207,6 +1207,10 @@ ul { list-style: none; }
   font-weight: 600;
 }
 
+.form-success[hidden] {
+  display: none !important;
+}
+
 /* ══════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════ */
