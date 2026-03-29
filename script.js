@@ -242,30 +242,34 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     if (btnText)    btnText.hidden     = true;
     if (btnLoading) btnLoading.hidden  = false;
 
-    await new Promise(r => setTimeout(r, 1400));
-
-    if (btnText)    btnText.hidden     = false;
-    if (btnLoading) btnLoading.hidden  = true;
-    if (submitBtn)  submitBtn.disabled = false;
-
-    // Show success
-    if (formSuccess) {
-      formSuccess.hidden = false;
-      form.reset();
-      setTimeout(() => { formSuccess.hidden = true; }, 6000);
-    }
-
-    /*
-      TO CONNECT A REAL BACKEND:
-
+    try {
       const data = new FormData(form);
-      const res  = await fetch('https://formspree.io/f/YOUR_ID', {
+      const res = await fetch('https://formspree.io/f/mlgojawz', {
         method: 'POST',
         body: data,
         headers: { Accept: 'application/json' }
       });
-      if (res.ok) { ... show success ... }
-    */
+
+      if (btnText)    btnText.hidden     = false;
+      if (btnLoading) btnLoading.hidden  = true;
+      if (submitBtn)  submitBtn.disabled = false;
+
+      if (res.ok) {
+        if (formSuccess) {
+          formSuccess.hidden = false;
+          form.reset();
+          setTimeout(() => { formSuccess.hidden = true; }, 6000);
+        }
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      if (btnText)    btnText.hidden     = false;
+      if (btnLoading) btnLoading.hidden  = true;
+      if (submitBtn)  submitBtn.disabled = false;
+      alert('Error sending message. Please try again.');
+    }
   });
 })();
 
