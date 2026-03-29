@@ -196,6 +196,10 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   const form    = $('#contactForm');
   if (!form) return;
 
+  // Ensure success message is hidden on page load
+  const formSuccess = $('#formSuccess');
+  if (formSuccess) formSuccess.hidden = true;
+
   const fields = {
     name:    { el: $('#name'),    error: $('#nameError'),    validate: v => v.trim().length >= 2 ? '' : 'Name must be at least 2 characters.' },
     email:   { el: $('#email'),   error: $('#emailError'),   validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Please enter a valid email address.' },
