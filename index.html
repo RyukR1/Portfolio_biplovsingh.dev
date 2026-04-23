@@ -210,33 +210,36 @@
             </div>
           </div>
 
-          <div class="about-visual" data-aos="fade-left">
-            <div class="about-card-stack">
-              <div class="about-avatar-card">
-                <div class="avatar-placeholder">
-                  <i class="fas fa-user-circle"></i>
-                  <p class="avatar-hint">Add your photo here</p>
-                </div>
-              </div>
-              <div class="floating-badge badge-pytorch">
-                <i class="fas fa-fire"></i> PyTorch
-              </div>
-              <div class="floating-badge badge-linux">
-                <i class="fab fa-linux"></i> Linux
-              </div>
-              <div class="floating-badge badge-python">
-                <i class="fab fa-python"></i> Python
-              </div>
+          <div class="about-visual" data-aos="fade-left" style="position: relative; height: 100%;">
+            <div class="floating-badge badge-pytorch" style="z-index: 10; top: -1rem; right: 2rem;">
+              <i class="fas fa-fire"></i> PyTorch
+            </div>
+            <div class="floating-badge badge-linux" style="z-index: 10; bottom: 2rem; left: -1.5rem;">
+              <i class="fab fa-linux"></i> Linux
+            </div>
+            <div class="floating-badge badge-python" style="z-index: 10; top: 40%; right: -1.5rem;">
+              <i class="fab fa-python"></i> Python
             </div>
 
-            <div class="terminal-snippet">
+            <div class="terminal-snippet" style="height: 100%; display: flex; flex-direction: column;">
               <div class="window-bar mini">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
                 <span class="window-title">terminal</span>
               </div>
-              <div class="terminal-body">
+              <div class="terminal-body" style="flex: 1;">
+                <p><span class="t-prompt">biplov@dev</span><span class="t-sep">:</span><span class="t-path">~/projects</span> <span class="t-dollar">$</span> neofetch</p>
+                <p class="t-out" style="color: var(--accent); font-weight: bold;">biplov@dev</p>
+                <p class="t-out">-------------</p>
+                <p class="t-out"><span style="color: #60a5fa;">OS</span>: Ubuntu 22.04 LTS</p>
+                <p class="t-out"><span style="color: #60a5fa;">Host</span>: Data Science Workstation</p>
+                <p class="t-out"><span style="color: #60a5fa;">Kernel</span>: 5.15.0-generic</p>
+                <p class="t-out"><span style="color: #60a5fa;">Packages</span>: 1420 (dpkg), 12 (snap)</p>
+                <p class="t-out"><span style="color: #60a5fa;">Shell</span>: bash 5.1.16</p>
+                <p class="t-out"><span style="color: #60a5fa;">CPU</span>: Intel i9-12900K (24) @ 5.200GHz</p>
+                <p class="t-out"><span style="color: #60a5fa;">GPU</span>: NVIDIA GeForce RTX 3090</p>
+                <br>
                 <p><span class="t-prompt">biplov@dev</span><span class="t-sep">:</span><span class="t-path">~/projects</span> <span class="t-dollar">$</span> python train.py</p>
                 <p class="t-out">Epoch 1/10 — loss: 0.4231 — acc: 0.8740</p>
                 <p class="t-out">Epoch 5/10 — loss: 0.1823 — acc: 0.9310</p>
@@ -386,7 +389,7 @@
           <article class="project-card project-featured" data-aos="fade-up">
             <div class="project-header">
               <div class="project-icon">
-                <i class="fas fa-mobile-alt"></i>
+                <i class="fas fa-network-wired"></i>
               </div>
               <div class="project-meta">
                 <span class="project-number">01</span>
@@ -395,38 +398,39 @@
             </div>
 
             <div class="project-body">
-              <h3 class="project-title">Aspect Pulse: Sentiment Analysis on Samsung S25</h3>
-              <p class="project-tagline">Aspect-Based Sentiment Analysis Tool</p>
+              <h3 class="project-title">Website Clickstream Trend Analysis</h3>
+              <p class="project-tagline">Big Data Pipeline (Hadoop Ecosystem)</p>
               <p class="project-desc">
-                An aspect-based sentiment analysis tool extracting user opinions on specific smartphone features. 
-                I scraped and preprocessed user reviews to isolate and analyze sentiments targeted at specific device aspects 
-                such as the camera, battery life, and display.
+                A complete big data pipeline demonstrating ETL and analytics using Apache Flume, Pig, and Hive. 
+                Processes website clickstream data to identify user behavior trends and patterns—similar to how 
+                Amazon, Netflix, and Facebook analyze user interactions.
               </p>
 
               <div class="project-highlights">
                 <div class="highlight-item">
                   <i class="fas fa-check-circle"></i>
-                  <span>Scraped and preprocessed Samsung S25 user reviews</span>
+                  <span>Ingests clickstream data in real-time using Apache Flume</span>
                 </div>
                 <div class="highlight-item">
                   <i class="fas fa-check-circle"></i>
-                  <span>Isolated specific device aspects (camera, battery, display)</span>
+                  <span>Cleans raw logs and removes errors with Apache Pig</span>
                 </div>
                 <div class="highlight-item">
                   <i class="fas fa-check-circle"></i>
-                  <span>Utilized NLP techniques for accurate feedback categorization</span>
+                  <span>Analyzes clean data using SQL queries in Apache Hive</span>
                 </div>
                 <div class="highlight-item">
                   <i class="fas fa-check-circle"></i>
-                  <span>Categorized sentiments into positive, negative, and neutral buckets</span>
+                  <span>Containerized distributed system deployed via Docker</span>
                 </div>
               </div>
 
               <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">NLP</span>
-                <span class="tech-tag">Web Scraping</span>
-                <span class="tech-tag">Data Preprocessing</span>
+                <span class="tech-tag">Apache Flume</span>
+                <span class="tech-tag">Apache Pig</span>
+                <span class="tech-tag">Apache Hive</span>
+                <span class="tech-tag">Hadoop</span>
+                <span class="tech-tag">Docker</span>
               </div>
             </div>
 
