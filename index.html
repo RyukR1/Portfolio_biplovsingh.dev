@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Biplov Singh — Data Science & Machine Learning Developer. Building end-to-end ML pipelines, NLP systems, and data-driven solutions." />
-  <meta name="keywords" content="Biplov Singh, Data Science, Machine Learning, NLP, PyTorch, Python, Portfolio" />
+  <meta name="description"
+    content="Biplov Singh — Data Engineer & Apache Airflow Contributor. Building high-throughput streaming pipelines, distributed processing systems, and scalable data platforms." />
+  <meta name="keywords"
+    content="Biplov Singh, Data Engineer, Apache Airflow, Big Data, Apache Spark, Kafka, Hadoop, SQL, ETL, Python, Portfolio" />
   <meta name="author" content="Biplov Singh" />
-  <title>Biplov Singh | Data Science &amp; ML Developer</title>
+  <title>Biplov Singh | Data Engineer</title>
 
-  <!-- Fonts -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- ────────────────────────── NAVBAR ────────────────────────── -->
   <header class="navbar" id="navbar">
-    <div class="nav-inner container">
+    <div class="container nav-inner">
       <a href="#home" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>biplov<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span>
+        biplovsingh<span class="logo-accent">.dev</span>
       </a>
 
       <nav class="nav-links" id="navLinks">
         <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#skills" class="nav-link">Stack</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="Resume.pdf" class="btn btn-outline btn-sm" target="_blank" rel="noopener">
@@ -41,7 +47,7 @@
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <i class="fas fa-sun" id="themeIcon"></i>
         </button>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -51,201 +57,109 @@
   <main>
 
     <!-- ────────────────────────── HERO ────────────────────────── -->
-    <section class="hero section" id="home">
-      <div class="hero-bg">
-        <div class="grid-overlay"></div>
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-      </div>
-
+    <section class="hero" id="home">
       <div class="container hero-inner">
-        <div class="hero-content" data-aos="fade-up">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            Available for opportunities
-          </div>
-
-          <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Biplov Singh</span>
-          </h1>
-
-          <div class="hero-typewriter">
-            <span class="typewriter-prefix">I build </span>
-            <span class="typewriter" id="typewriter"></span>
-          </div>
-
-          <p class="hero-sub">
-            Data Science &amp; Machine Learning developer specializing in end-to-end ML pipelines,
-            NLP systems, and data-driven solutions. Transforming raw data into meaningful insights.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
-              <i class="fas fa-rocket"></i> View My Work
-            </a>
-            <a href="Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">
-              <i class="fas fa-file-alt"></i> Download Resume
-            </a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <span class="stat-number">3+</span>
-              <span class="stat-label">ML Projects</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Technologies</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-              <span class="stat-number">∞</span>
-              <span class="stat-label">Curiosity</span>
-            </div>
-          </div>
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span>Available for Data Engineering opportunities</span>
         </div>
 
-        <div class="hero-visual" data-aos="fade-left">
-          <div class="code-window">
-            <div class="window-bar">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-              <span class="window-title">biplov_singh.py</span>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="kw">class</span> <span class="cls">BiplovSingh</span>:
-  <span class="kw">def</span> <span class="fn">__init__</span>(<span class="var">self</span>):
-    <span class="var">self</span>.name    <span class="op">=</span> <span class="str">"Biplov Singh"</span>
-    <span class="var">self</span>.domain  <span class="op">=</span> <span class="str">"biplovsingh.dev"</span>
-    <span class="var">self</span>.focus   <span class="op">=</span> [
-      <span class="str">"Machine Learning"</span>,
-      <span class="str">"Deep Learning / NLP"</span>,
-      <span class="str">"Data Engineering"</span>,
-    ]
-    <span class="var">self</span>.stack   <span class="op">=</span> {
-      <span class="str">"lang"</span>: <span class="str">"Python,C,C++"</span>,
-      <span class="str">"data"</span>: <span class="str">"Pandas,Numpy"</span>,
-      <span class="str">"viz"</span>: <span class="str">"Matplotlib,Seaborn"</span>,
-      <span class="str">"dl"</span>:   <span class="str">"PyTorch"</span>,
-      <span class="str">"db"</span>:   <span class="str">"MySQL / MongoDB"</span>,
-      <span class="str">"os"</span>:   <span class="str">"Linux / Ubuntu"</span>,
-      <span class="str">"other"</span>: <span class="str">"Git,Docker"</span>,
-    }
+        <h1 class="hero-title">
+          Biplov Singh
+        </h1>
 
-  <span class="kw">def</span> <span class="fn">available</span>(<span class="var">self</span>):
-    <span class="kw">return</span> <span class="bool">True</span>  <span class="cmt"># open to work!</span></code></pre>
-            </div>
+        <p class="hero-sub">
+          Data Engineer &amp; Apache Airflow Contributor specializing in building scalable batch &amp; real-time
+          streaming pipelines,
+          distributed processing architectures, and robust cloud data platforms.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            View My Work <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+            <i class="fas fa-file-alt"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-num">Airflow</span>
+            <span class="metric-label">Open Source Contributor</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-num">100+ ev/s</span>
+            <span class="metric-label">Real-Time Streaming Stack</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-num">IIIT Lucknow</span>
+            <span class="metric-label">M.Sc. Data Science ('27)</span>
           </div>
         </div>
       </div>
-
-      <a href="#about" class="scroll-down" aria-label="Scroll down">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
-        </div>
-      </a>
     </section>
 
     <!-- ────────────────────────── ABOUT ────────────────────────── -->
     <section class="section" id="about">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">01. about</span>
-          <h2 class="section-title">About Me</h2>
-          <p class="section-sub">The story behind the code</p>
+        <div class="section-header">
+          <span class="mono-tag">01. About</span>
+          <h2 class="section-title">Engineering Background</h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-text" data-aos="fade-right">
+          <div class="about-text">
             <p class="about-lead">
-              I'm a Data Science student with a passion for turning complex data into intelligent,
-              real-world solutions.
+              I specialize in designing, scaling, and maintaining high-throughput data architectures and distributed
+              processing platforms.
             </p>
             <p>
-              My journey into Machine Learning started when I became really interested in recognizing patterns. 
-              Over time I got really good at building Machine Learning systems from start to finish. 
-              Now I am studying for a <strong>MSc in Data Science At IIIT Lucknow.</strong>
-              I like to think about the process of building a model from getting the data
-              ready and making sure it is clean to actually using the model and checking how well it works.
+              My focus lies in building resilient, automated data workflows. As an open-source contributor to
+              <strong>Apache Airflow</strong>, I standardise provider testing frameworks (Snowflake, Teradata). I
+              construct real-time streaming pipelines using <strong>Apache Kafka</strong> and <strong>Spark Structured
+                Streaming</strong>, manage distributed compute clusters with <strong>Spark</strong> and
+              <strong>Hadoop</strong>, and architect modern Data Lakehouses with <strong>Apache Iceberg</strong>.
             </p>
             <p>
-              I am comfortable working with Machine Learning models like Transformers to understand language. 
-              I also like designing databases that work well and using the <strong>Linux terminal</strong> to set up experiments.
+              Currently pursuing my <strong>M.Sc. in Data Science at IIIT Lucknow (2025–2027)</strong>, I bridge the gap
+              between raw unstructured data streams and production-ready analytical engines using
+              <strong>Terraform</strong>, <strong>Docker</strong>, and <strong>AWS</strong>.
             </p>
-            <p>
-               I am also getting more interested, in <strong>Cybersecurity</strong> Testing how secure systems are. 
-            </p>
-
-            <div class="about-info-grid">
-              <div class="info-item">
-                <i class="fas fa-graduation-cap"></i>
-                <div>
-                  <span class="info-label">Education</span>
-                  <span class="info-value">Msc in Data Science at IIIT Lucknow(2025 - 2027)</span>
-                </div>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                  <span class="info-label">Location</span>
-                  <span class="info-value">Jamshedpur, Jharkhand</span>
-                </div>
-              </div>
-              <div class="info-item">
-                <i class="fab fa-linux"></i>
-                <div>
-                  <span class="info-label">Environment</span>
-                  <span class="info-value">Linux / Ubuntu</span>
-                </div>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-globe"></i>
-                <div>
-                  <span class="info-label">Website</span>
-                  <span class="info-value">biplovsingh.dev</span>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div class="about-visual" data-aos="fade-left" style="position: relative; height: 100%;">
-            <div class="floating-badge badge-pytorch" style="z-index: 10; top: -1rem; right: 2rem;">
-              <i class="fas fa-fire"></i> PyTorch
-            </div>
-            <div class="floating-badge badge-linux" style="z-index: 10; bottom: 2rem; left: -1.5rem;">
-              <i class="fab fa-linux"></i> Linux
-            </div>
-            <div class="floating-badge badge-python" style="z-index: 10; top: 40%; right: -1.5rem;">
-              <i class="fab fa-python"></i> Python
+          <div class="about-facts">
+            <div class="fact-item">
+              <i class="fas fa-code-branch fact-icon"></i>
+              <div class="fact-content">
+                <span class="fact-label">Open Source</span>
+                <span class="fact-val">Apache Airflow Contributor</span>
+                <span class="fact-sub">Refactored Snowflake &amp; Teradata provider test suites</span>
+              </div>
             </div>
 
-            <div class="terminal-snippet" style="height: 100%; display: flex; flex-direction: column;">
-              <div class="window-bar mini">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="window-title">terminal</span>
+            <div class="fact-item">
+              <i class="fas fa-graduation-cap fact-icon"></i>
+              <div class="fact-content">
+                <span class="fact-label">Education</span>
+                <span class="fact-val">M.Sc. Data Science @ IIIT Lucknow</span>
+                <span class="fact-sub">Specialization: Distributed Big Data Systems</span>
               </div>
-              <div class="terminal-body" style="flex: 1;">
-                <p><span class="t-prompt">biplov@dev</span><span class="t-sep">:</span><span class="t-path">~/projects</span> <span class="t-dollar">$</span> neofetch</p>
-                <p class="t-out" style="color: var(--accent); font-weight: bold;">biplov@dev</p>
-                <p class="t-out">-------------</p>
-                <p class="t-out"><span style="color: #60a5fa;">OS</span>: Ubuntu 22.04 LTS</p>
-                <p class="t-out"><span style="color: #60a5fa;">Host</span>: Data Science Workstation</p>
-                <p class="t-out"><span style="color: #60a5fa;">Kernel</span>: 5.15.0-generic</p>
-                <p class="t-out"><span style="color: #60a5fa;">Packages</span>: 1420 (dpkg), 12 (snap)</p>
-                <p class="t-out"><span style="color: #60a5fa;">Shell</span>: bash 5.1.16</p>
-                <p class="t-out"><span style="color: #60a5fa;">CPU</span>: Intel i9-12900K (24) @ 5.200GHz</p>
-                <p class="t-out"><span style="color: #60a5fa;">GPU</span>: NVIDIA GeForce RTX 3090</p>
-                <br>
-                <p><span class="t-prompt">biplov@dev</span><span class="t-sep">:</span><span class="t-path">~/projects</span> <span class="t-dollar">$</span> python train.py</p>
-                <p class="t-out">Epoch 1/10 — loss: 0.4231 — acc: 0.8740</p>
-                <p class="t-out">Epoch 5/10 — loss: 0.1823 — acc: 0.9310</p>
-                <p class="t-out">Epoch 10/10 — loss: 0.0944 — acc: 0.9680</p>
-                <p class="t-success">✓ Model saved → ./models/best.pt</p>
-                <p><span class="t-prompt">biplov@dev</span><span class="t-sep">:</span><span class="t-path">~/projects</span> <span class="t-dollar">$</span> <span class="t-cursor">█</span></p>
+            </div>
+
+            <div class="fact-item">
+              <i class="fas fa-map-marker-alt fact-icon"></i>
+              <div class="fact-content">
+                <span class="fact-label">Location</span>
+                <span class="fact-val">Jamshedpur, Jharkhand, India</span>
+              </div>
+            </div>
+
+            <div class="fact-item">
+              <i class="fas fa-briefcase fact-icon"></i>
+              <div class="fact-content">
+                <span class="fact-label">Availability</span>
+                <span class="fact-val">Open for Roles &amp; Consultations</span>
               </div>
             </div>
           </div>
@@ -253,124 +167,65 @@
       </div>
     </section>
 
-    <!-- ────────────────────────── SKILLS ────────────────────────── -->
-    <section class="section section-alt" id="skills">
+    <!-- ────────────────────────── STACK ────────────────────────── -->
+    <section class="section" id="skills">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">02. skills</span>
-          <h2 class="section-title">Tech Stack</h2>
-          <p class="section-sub">Tools and technologies I work with</p>
+        <div class="section-header">
+          <span class="mono-tag">02. Stack</span>
+          <h2 class="section-title">Technologies &amp; Toolkit</h2>
         </div>
 
-        <div class="skills-categories" data-aos="fade-up">
-
-          <div class="skill-category">
-            <div class="category-header">
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-card-header">
               <i class="fas fa-code"></i>
               <h3>Core Languages</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-chip skill-primary">
-                <i class="fab fa-python"></i>
-                <span>Python</span>
-                <div class="skill-level expert">Expert</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-database"></i>
-                <span>SQL (MySQL)</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-terminal"></i>
-                <span>Bash / Shell</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
+            <div class="tech-list">
+              <span class="tech-chip"><i class="fab fa-python"></i> Python</span>
+              <span class="tech-chip"><i class="fas fa-database"></i> SQL (PostgreSQL, MySQL)</span>
+              <span class="tech-chip"><i class="fas fa-terminal"></i> Bash / Shell</span>
             </div>
           </div>
 
-          <div class="skill-category">
-            <div class="category-header">
-              <i class="fas fa-brain"></i>
-              <h3>ML &amp; Deep Learning</h3>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <i class="fas fa-stream"></i>
+              <h3>Orchestration &amp; Streaming</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-chip skill-primary">
-                <i class="fas fa-fire"></i>
-                <span>PyTorch</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-robot"></i>
-                <span>Machine Learning</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-network-wired"></i>
-                <span>Deep Learning</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-comments"></i>
-                <span>NLP / Transformers</span>
-                <div class="skill-level learning">Learning</div>
-              </div>
+            <div class="tech-list">
+              <span class="tech-chip"><i class="fas fa-wind"></i> Apache Airflow</span>
+              <span class="tech-chip"><i class="fas fa-bolt"></i> Apache Spark / PySpark</span>
+              <span class="tech-chip"><i class="fas fa-project-diagram"></i> Apache Kafka</span>
+              <span class="tech-chip"><i class="fas fa-network-wired"></i> Hadoop (Hive, Pig, Flume)</span>
             </div>
           </div>
 
-          <div class="skill-category">
-            <div class="category-header">
-              <i class="fas fa-chart-bar"></i>
-              <h3>Data &amp; Visualization</h3>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <i class="fas fa-database"></i>
+              <h3>Databases &amp; Storage</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-chip">
-                <i class="fas fa-table"></i>
-                <span>Pandas / NumPy</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-chart-line"></i>
-                <span>Matplotlib / Seaborn</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-chart-pie"></i>
-                <span>Data Visualization</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
+            <div class="tech-list">
+              <span class="tech-chip"><i class="fas fa-layer-group"></i> Apache Iceberg / Parquet</span>
+              <span class="tech-chip"><i class="fas fa-map"></i> PostgreSQL &amp; PostGIS</span>
+              <span class="tech-chip"><i class="fas fa-bolt"></i> Redis In-Memory Cache</span>
+              <span class="tech-chip"><i class="fas fa-shield-alt"></i> Great Expectations</span>
             </div>
           </div>
 
-          <div class="skill-category">
-            <div class="category-header">
-              <i class="fas fa-shield-alt"></i>
-              <h3>Systems &amp; Security</h3>
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <i class="fas fa-server"></i>
+              <h3>Infrastructure &amp; DevOps</h3>
             </div>
-            <div class="skill-list">
-              <div class="skill-chip">
-                <i class="fab fa-linux"></i>
-                <span>Linux / Ubuntu</span>
-                <div class="skill-level proficient">Proficient</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-user-secret"></i>
-                <span>Cybersecurity</span>
-                <div class="skill-level learning">Learning</div>
-              </div>
-              <div class="skill-chip">
-                <i class="fas fa-search"></i>
-                <span>Penetration Testing</span>
-                <div class="skill-level learning">Learning</div>
-              </div>
+            <div class="tech-list">
+              <span class="tech-chip"><i class="fab fa-docker"></i> Docker &amp; Compose</span>
+              <span class="tech-chip"><i class="fas fa-cloud"></i> Terraform (IaC) / AWS</span>
+              <span class="tech-chip"><i class="fab fa-linux"></i> Linux Administration</span>
+              <span class="tech-chip"><i class="fab fa-git-alt"></i> Git / CI/CD (pytest)</span>
             </div>
           </div>
-
-        </div>
-
-        <div class="skills-legend" data-aos="fade-up">
-          <span><span class="legend-dot expert"></span> Expert</span>
-          <span><span class="legend-dot proficient"></span> Proficient</span>
-          <span><span class="legend-dot learning"></span> Learning</span>
         </div>
       </div>
     </section>
@@ -378,249 +233,221 @@
     <!-- ────────────────────────── PROJECTS ────────────────────────── -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">03. projects</span>
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-sub">A selection of my most impactful work</p>
+        <div class="section-header">
+          <span class="mono-tag">03. Work</span>
+          <h2 class="section-title">Open Source &amp; Projects</h2>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-list">
 
-          <article class="project-card project-featured" data-aos="fade-up">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-network-wired"></i>
-              </div>
-              <div class="project-meta">
-                <span class="project-number">01</span>
-                <span class="project-badge badge-featured">Featured</span>
+          <!-- Open Source Contribution -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">OPEN SOURCE // 01</span>
+              <span class="project-badge">Apache Airflow</span>
+            </div>
+
+            <div>
+              <h3 class="project-title">Apache Airflow Core Repository</h3>
+              <p class="project-tagline">Open Source Contributor (Workflow Orchestration)</p>
+              <p class="project-desc">
+                Contributed code modifications to the official core repository of Apache Airflow, standardizing provider
+                testing infrastructure and CI/CD pipeline stability.
+              </p>
+
+              <div class="project-bullets">
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Refactored provider test suites for Snowflake (#68898) and Teradata (#68190) modules.</span>
+                </div>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Eliminated legacy unittest dependencies in favor of modern pytest conventions.</span>
+                </div>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Validated pipeline stability across 80+ continuous integration checks on multi-platform
+                    runners.</span>
+                </div>
               </div>
             </div>
 
-            <div class="project-body">
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">Apache Airflow</span>
+                <span class="tag">Python</span>
+                <span class="tag">pytest</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">Breeze</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/apache/airflow" class="project-link" target="_blank" rel="noopener">
+                  <i class="fab fa-github"></i> Airflow Repo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">PROJECT // 02</span>
+              <span class="project-badge">Streaming</span>
+            </div>
+
+            <div>
+              <h3 class="project-title">Real-Time Ride Analytics Pipeline</h3>
+              <p class="project-tagline">Kafka &amp; Spark Structured Streaming</p>
+              <p class="project-desc">
+                A production-grade streaming architecture processing live NYC taxi events at 100+ events/sec,
+                calculating geospatial surge pricing, windowed aggregations, and dual storage persistence.
+              </p>
+
+              <div class="project-bullets">
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Ingests high-frequency ride events using Apache Kafka brokers.</span>
+                </div>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Applies 5-minute tumbling windows &amp; 2-minute watermarks in Spark Structured
+                    Streaming.</span>
+                </div>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Integrates PostGIS spatial geofencing for dynamic surge multipliers.</span>
+                </div>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Dual storage sinks: Redis (hot caching) and S3 Apache Iceberg (lakehouse cold storage).</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tag">Apache Spark</span>
+                <span class="tag">Apache Kafka</span>
+                <span class="tag">PostGIS</span>
+                <span class="tag">Redis</span>
+                <span class="tag">Apache Iceberg</span>
+                <span class="tag">Terraform</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/RyukR1/Real_Time_Ride-Analysis" class="project-link" target="_blank"
+                  rel="noopener">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-num">PROJECT // 03</span>
+              <span class="project-badge">Batch ETL</span>
+            </div>
+
+            <div>
               <h3 class="project-title">Website Clickstream Trend Analysis</h3>
-              <p class="project-tagline">Big Data Pipeline (Hadoop Ecosystem)</p>
+              <p class="project-tagline">Hadoop Big Data Pipeline</p>
               <p class="project-desc">
-                A complete big data pipeline demonstrating ETL and analytics using Apache Flume, Pig, and Hive. 
-                Processes website clickstream data to identify user behavior trends and patterns—similar to how 
-                Amazon, Netflix, and Facebook analyze user interactions.
+                An end-to-end distributed data pipeline performing ETL and trend analytics on high-volume website
+                clickstream logs using Apache Flume, Pig, and Hive.
               </p>
 
-              <div class="project-highlights">
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Ingests clickstream data in real-time using Apache Flume</span>
+              <div class="project-bullets">
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Ingests clickstream log data continuously via Apache Flume agents.</span>
                 </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Cleans raw logs and removes errors with Apache Pig</span>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Cleans raw logs and handles corrupted records using Apache Pig scripts.</span>
                 </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Analyzes clean data using SQL queries in Apache Hive</span>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Runs analytical queries and aggregates user session trends in Apache Hive.</span>
                 </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Containerized distributed system deployed via Docker</span>
+                <div class="project-bullet">
+                  <i class="fas fa-chevron-right"></i>
+                  <span>Fully containerized distributed system environment managed via Docker.</span>
                 </div>
-              </div>
-
-              <div class="project-tech">
-                <span class="tech-tag">Apache Flume</span>
-                <span class="tech-tag">Apache Pig</span>
-                <span class="tech-tag">Apache Hive</span>
-                <span class="tech-tag">Hadoop</span>
-                <span class="tech-tag">Docker</span>
               </div>
             </div>
 
             <div class="project-footer">
-              <a href="#" class="project-link" aria-label="GitHub repository">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="#" class="project-link project-link-demo" aria-label="Live demo">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
+              <div class="project-tags">
+                <span class="tag">Apache Flume</span>
+                <span class="tag">Apache Pig</span>
+                <span class="tag">Apache Hive</span>
+                <span class="tag">Hadoop</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/RyukR1/Clickstream_analysis" class="project-link" target="_blank"
+                  rel="noopener">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-seedling"></i>
-              </div>
-              <div class="project-meta">
-                <span class="project-number">02</span>
-              </div>
-            </div>
-
-            <div class="project-body">
-              <h3 class="project-title">Crop Yield Prediction System</h3>
-              <p class="project-tagline">Machine Learning Predictive Model</p>
-              <p class="project-desc">
-                A machine learning model designed to predict optimal crop choices based on environmental factors. 
-                Developed using Python, Pandas, and Scikit-Learn to analyze agricultural data including soil metrics, 
-                temperature, and rainfall to enhance data-driven agricultural decision-making.
-              </p>
-
-              <div class="project-highlights">
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Developed a predictive model for optimal agricultural choices</span>
-                </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Analyzed environmental data (soil metrics, temp, rainfall)</span>
-                </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Implemented advanced classification algorithms</span>
-                </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Enhanced data-driven decision-making for agriculture</span>
-                </div>
-              </div>
-
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Scikit-Learn</span>
-                <span class="tech-tag">Machine Learning</span>
-                <span class="tech-tag">Classification</span>
-              </div>
-            </div>
-
-            <div class="project-footer">
-              <a href="#" class="project-link" aria-label="GitHub repository">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="#" class="project-link project-link-demo" aria-label="Live demo">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-            </div>
-          </article>
-
-          <article class="project-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-film"></i>
-              </div>
-              <div class="project-meta">
-                <span class="project-number">03</span>
-              </div>
-            </div>
-
-            <div class="project-body">
-              <h3 class="project-title">Movie Recommendation System</h3>
-              <p class="project-tagline">Content-Based Filtering Engine</p>
-              <p class="project-desc">
-                A recommendation engine designed to suggest movies based on metadata and user preferences. 
-                Built a content-based filtering system leveraging dataset features like genres, cast, and crew 
-                to find similar titles and process large datasets efficiently.
-              </p>
-
-              <div class="project-highlights">
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Built a content-based filtering recommendation system</span>
-                </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Leveraged metadata features like genres, cast, and crew</span>
-                </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Processed large datasets using Pandas and NumPy</span>
-                </div>
-                <div class="highlight-item">
-                  <i class="fas fa-check-circle"></i>
-                  <span>Applied cosine similarity to accurately calculate and rank results</span>
-                </div>
-              </div>
-
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">NumPy</span>
-                <span class="tech-tag">Cosine Similarity</span>
-                <span class="tech-tag">Content-Based Filtering</span>
-              </div>
-            </div>
-
-            <div class="project-footer">
-              <a href="#" class="project-link" aria-label="GitHub repository">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-              <a href="#" class="project-link project-link-demo" aria-label="Live demo">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="projects-cta" data-aos="fade-up">
-          <p>More projects on GitHub</p>
-          <a href="https://github.com/RyukR1" class="btn btn-outline" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i> View All Projects
-          </a>
         </div>
       </div>
     </section>
 
     <!-- ────────────────────────── CONTACT ────────────────────────── -->
-    <section class="section section-alt" id="contact">
+    <section class="section" id="contact">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="section-tag">04. contact</span>
+        <div class="section-header">
+          <span class="mono-tag">04. Contact</span>
           <h2 class="section-title">Get In Touch</h2>
-          <p class="section-sub">Have a project in mind? Let's talk.</p>
         </div>
 
         <div class="contact-grid">
-          <!-- Info pane -->
-          <div class="contact-info" data-aos="fade-right">
+          <div class="contact-info">
             <p class="contact-lead">
-              I'm currently open to new opportunities, collaborations, and interesting projects.
-              Whether you have a question, a proposal, or just want to say hi — my inbox is always open.
+              I am open to new data engineering opportunities, project collaborations, and discussions on distributed
+              architectures.
             </p>
 
-            <div class="contact-links">
-              <a href="mailto:biplovsingh785@gmail.com" class="contact-link">
-                <div class="contact-icon-wrap">
+            <div class="contact-channels">
+              <a href="mailto:biplovsingh785@gmail.com" class="contact-item">
+                <div class="contact-item-icon">
                   <i class="fas fa-envelope"></i>
                 </div>
-                <div>
-                  <span class="cl-label">Email</span>
-                  <span class="cl-value">biplovsingh785@gmail.com</span>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Email</span>
+                  <span class="contact-item-value">biplovsingh785@gmail.com</span>
                 </div>
               </a>
 
-              <a href="https://github.com/RyukR1" class="contact-link" target="_blank" rel="noopener">
-                <div class="contact-icon-wrap">
+              <a href="https://github.com/RyukR1" class="contact-item" target="_blank" rel="noopener">
+                <div class="contact-item-icon">
                   <i class="fab fa-github"></i>
                 </div>
-                <div>
-                  <span class="cl-label">GitHub</span>
-                  <span class="cl-value">github.com/RyukR1</span>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">GitHub</span>
+                  <span class="contact-item-value">github.com/RyukR1</span>
                 </div>
               </a>
 
-              <a href="https://www.linkedin.com/in/biplov-singh-085646256/" class="contact-link" target="_blank" rel="noopener">
-                <div class="contact-icon-wrap">
+              <a href="https://www.linkedin.com/in/biplov-singh-085646256/" class="contact-item" target="_blank"
+                rel="noopener">
+                <div class="contact-item-icon">
                   <i class="fab fa-linkedin"></i>
                 </div>
-                <div>
-                  <span class="cl-label">LinkedIn</span>
-                  <span class="cl-value">linkedin.com/in/biplovsingh</span>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">LinkedIn</span>
+                  <span class="contact-item-value">linkedin.com/in/biplov-singh</span>
                 </div>
               </a>
             </div>
           </div>
 
-          <!-- Contact form -->
-          <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+          <form class="contact-form" id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name</label>
@@ -633,22 +460,26 @@
                 <span class="form-error" id="emailError"></span>
               </div>
             </div>
+
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              <input type="text" id="subject" name="subject" placeholder="Project or opportunity inquiry" required />
+              <span class="form-error" id="subjectError"></span>
             </div>
+
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or question..." required></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="How can I help you?" required></textarea>
               <span class="form-error" id="messageError"></span>
             </div>
+
             <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-text">Send Message</span>
               <span class="btn-loading" hidden><i class="fas fa-spinner fa-spin"></i> Sending...</span>
             </button>
-            <div class="form-success" id="formSuccess" hidden>
-              <i class="fas fa-check-circle"></i>
-              Message sent! I'll get back to you soon.
+
+            <div class="form-success" id="formSuccess" hidden style="display: none;">
+              <i class="fas fa-check-circle"></i> Message sent successfully.
             </div>
           </form>
         </div>
@@ -662,14 +493,14 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="#home" class="nav-logo">
-          <span class="logo-bracket">&lt;</span>biplov<span class="logo-accent">.</span>dev<span class="logo-bracket">/&gt;</span>
+          biplov<span class="logo-accent">.dev</span>
         </a>
-        <p>Building intelligent systems, one model at a time.</p>
+        <p>Designing scalable, reliable, high-throughput data platforms.</p>
       </div>
 
       <div class="footer-nav">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#skills">Stack</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
@@ -678,29 +509,29 @@
         <a href="https://github.com/RyukR1" target="_blank" rel="noopener" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/biplov-singh-085646256/?skipRedirect=true" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/biplov-singh-085646256/" target="_blank" rel="noopener"
+          aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="mailto:biplov@biplovsingh.dev" aria-label="Email">
+        <a href="mailto:biplovsingh785@gmail.com" aria-label="Email">
           <i class="fas fa-envelope"></i>
         </a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>
-        &copy; <span id="year"></span> Biplov Singh &bull; biplovsingh.dev &bull;
-        Designed &amp; built with <i class="fas fa-heart" style="color: var(--accent);"></i>
-      </p>
+      <div class="container">
+        &copy; <span id="year"></span> Biplov Singh &bull; Minimalist Data Engineering Portfolio
+      </div>
     </div>
   </footer>
 
-  <!-- Back to top -->
+  <!-- Back to top button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-chevron-up"></i>
+    <i class="fas fa-arrow-up"></i>
   </button>
 
   <script src="script.js"></script>
 </body>
-</html> 
- 
+
+</html>

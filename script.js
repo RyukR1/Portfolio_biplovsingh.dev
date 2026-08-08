@@ -1,34 +1,32 @@
-/* ═══════════════════════════════════════════════
-   BIPLOV SINGH — PORTFOLIO SCRIPT
+/* ═════════════════════════════════════════════════════════════════════
+   BIPLOV SINGH — MINIMALIST PORTFOLIO SCRIPT
    biplovsingh.dev
-══════════════════════════════════════════════ */
+   ═════════════════════════════════════════════════════════════════════ */
 
 'use strict';
 
-/* ── Helpers ── */
+/* ── DOM Selectors ── */
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-/* ══════════════════════════════════════════
-   THEME TOGGLE (dark / light)
-══════════════════════════════════════════ */
+/* ═════════════════════════════════════════════════════════════════════
+   THEME TOGGLE (Dark / Light)
+   ═════════════════════════════════════════════════════════════════════ */
 (function initTheme() {
-  const root    = document.documentElement;
-  const btn     = $('#themeToggle');
-  const icon    = $('#themeIcon');
-  const STORAGE = 'portfolio-theme';
+  const root = document.documentElement;
+  const btn = $('#themeToggle');
+  const icon = $('#themeIcon');
+  const STORAGE_KEY = 'portfolio-theme';
 
-  const saved = localStorage.getItem(STORAGE) ||
+  const savedTheme = localStorage.getItem(STORAGE_KEY) ||
     (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 
-  applyTheme(saved);
+  applyTheme(savedTheme);
 
   btn?.addEventListener('click', () => {
-    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    localStorage.setItem(STORAGE, next);
-    btn.classList.add('spin');
-    setTimeout(() => btn.classList.remove('spin'), 400);
+    const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    localStorage.setItem(STORAGE_KEY, nextTheme);
   });
 
   function applyTheme(theme) {
@@ -39,26 +37,27 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   }
 })();
 
-/* ══════════════════════════════════════════
-   NAVBAR — scroll / active link
-══════════════════════════════════════════ */
+/* ═════════════════════════════════════════════════════════════════════
+   NAVBAR & SECTION HIGHLIGHTING
+   ═════════════════════════════════════════════════════════════════════ */
 (function initNavbar() {
   const navbar = $('#navbar');
   const navLinks = $$('.nav-link');
   const sections = $$('section[id]');
 
   const onScroll = () => {
-    // Scrolled class for blur background
     navbar?.classList.toggle('scrolled', window.scrollY > 20);
 
-    // Active link highlight
-    const scrollY = window.scrollY + 100;
+    const scrollY = window.scrollY + 120;
     sections.forEach(sec => {
       const top = sec.offsetTop;
-      const h   = sec.offsetHeight;
-      const id  = sec.id;
-      if (scrollY >= top && scrollY < top + h) {
-        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+      const height = sec.offsetHeight;
+      const id = sec.id;
+
+      if (scrollY >= top && scrollY < top + height) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        });
       }
     });
   };
@@ -67,21 +66,20 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   onScroll();
 })();
 
-/* ══════════════════════════════════════════
-   HAMBURGER MENU
-══════════════════════════════════════════ */
+/* ═════════════════════════════════════════════════════════════════════
+   MOBILE NAVIGATION MENU
+   ═════════════════════════════════════════════════════════════════════ */
 (function initHamburger() {
   const hamburger = $('#hamburger');
-  const navLinks  = $('#navLinks');
+  const navLinks = $('#navLinks');
 
   hamburger?.addEventListener('click', () => {
-    const open = hamburger.classList.toggle('open');
-    navLinks?.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+    const isOpen = hamburger.classList.toggle('open');
+    navLinks?.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close on nav link click
   $$('.nav-link, .nav-links .btn').forEach(link => {
     link.addEventListener('click', () => {
       hamburger?.classList.remove('open');
@@ -89,93 +87,11 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       document.body.style.overflow = '';
     });
   });
-
-  // Close on outside click
-  document.addEventListener('click', e => {
-    if (!hamburger?.contains(e.target) && !navLinks?.contains(e.target)) {
-      hamburger?.classList.remove('open');
-      navLinks?.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  });
 })();
 
-/* ══════════════════════════════════════════
-   TYPEWRITER EFFECT
-══════════════════════════════════════════ */
-(function initTypewriter() {
-  const el = $('#typewriter');
-  if (!el) return;
-
-  const phrases = [
-    'ML Pipelines',
-    'Deep Learning Models',
-    'Data Pipelines',
-    'Intelligent Solutions',
-  ];
-
-  let phraseIdx = 0;
-  let charIdx   = 0;
-  let deleting  = false;
-  let paused    = false;
-
-  const TYPING_SPEED  = 75;
-  const DELETING_SPEED= 40;
-  const PAUSE_AFTER   = 1800;
-  const PAUSE_BEFORE  = 350;
-
-  function tick() {
-    const current = phrases[phraseIdx];
-
-    if (!deleting && charIdx <= current.length) {
-      el.textContent = current.slice(0, charIdx);
-      charIdx++;
-      if (charIdx > current.length) {
-        paused = true;
-        setTimeout(() => { paused = false; deleting = true; tick(); }, PAUSE_AFTER);
-        return;
-      }
-    } else if (deleting && charIdx >= 0) {
-      el.textContent = current.slice(0, charIdx);
-      charIdx--;
-      if (charIdx < 0) {
-        deleting  = false;
-        phraseIdx = (phraseIdx + 1) % phrases.length;
-        setTimeout(() => { charIdx = 0; tick(); }, PAUSE_BEFORE);
-        return;
-      }
-    }
-
-    if (!paused) {
-      setTimeout(tick, deleting ? DELETING_SPEED : TYPING_SPEED);
-    }
-  }
-
-  tick();
-})();
-
-/* ══════════════════════════════════════════
-   SCROLL ANIMATIONS (lightweight AOS)
-══════════════════════════════════════════ */
-(function initScrollAnim() {
-  const elements = $$('[data-aos]');
-  if (!elements.length) return;
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('aos-animate');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-
-  elements.forEach(el => io.observe(el));
-})();
-
-/* ══════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════════════
    BACK TO TOP BUTTON
-══════════════════════════════════════════ */
+   ═════════════════════════════════════════════════════════════════════ */
 (function initBackToTop() {
   const btn = $('#backToTop');
   if (!btn) return;
@@ -189,30 +105,49 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   });
 })();
 
-/* ══════════════════════════════════════════
-   CONTACT FORM (validation + submit)
-══════════════════════════════════════════ */
+/* ═════════════════════════════════════════════════════════════════════
+   CONTACT FORM VALIDATION & SUBMISSION
+   ═════════════════════════════════════════════════════════════════════ */
 (function initContactForm() {
-  const form    = $('#contactForm');
+  const form = $('#contactForm');
   if (!form) return;
 
-  // Ensure success message is hidden on page load
   const formSuccess = $('#formSuccess');
-  if (formSuccess) formSuccess.hidden = true;
+  if (formSuccess) {
+    formSuccess.hidden = true;
+    formSuccess.style.display = 'none';
+  }
 
   const fields = {
-    name:    { el: $('#name'),    error: $('#nameError'),    validate: v => v.trim().length >= 2 ? '' : 'Name must be at least 2 characters.' },
-    email:   { el: $('#email'),   error: $('#emailError'),   validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Please enter a valid email address.' },
-    message: { el: $('#message'), error: $('#messageError'), validate: v => v.trim().length >= 15 ? '' : 'Message must be at least 15 characters.' },
+    name: {
+      el: $('#name'),
+      error: $('#nameError'),
+      validate: v => v.trim().length >= 2 ? '' : 'Name must be at least 2 characters.'
+    },
+    email: {
+      el: $('#email'),
+      error: $('#emailError'),
+      validate: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Please enter a valid email address.'
+    },
+    subject: {
+      el: $('#subject'),
+      error: $('#subjectError'),
+      validate: v => v.trim().length >= 3 ? '' : 'Subject must be at least 3 characters.'
+    },
+    message: {
+      el: $('#message'),
+      error: $('#messageError'),
+      validate: v => v.trim().length >= 10 ? '' : 'Message must be at least 10 characters.'
+    }
   };
 
-  // Live validation on blur
   Object.values(fields).forEach(({ el, error, validate }) => {
     el?.addEventListener('blur', () => {
       const msg = validate(el.value);
       if (error) error.textContent = msg;
       el.classList.toggle('error', !!msg);
     });
+
     el?.addEventListener('input', () => {
       if (el.classList.contains('error')) {
         const msg = validate(el.value);
@@ -225,7 +160,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Validate all
     let isValid = true;
     Object.values(fields).forEach(({ el, error, validate }) => {
       const msg = validate(el?.value ?? '');
@@ -236,98 +170,51 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
     if (!isValid) return;
 
-    // Simulate async submit (replace with real endpoint)
-    const submitBtn    = $('#submitBtn');
-    const btnText      = submitBtn?.querySelector('.btn-text');
-    const btnLoading   = submitBtn?.querySelector('.btn-loading');
-    const formSuccess  = $('#formSuccess');
+    const submitBtn = $('#submitBtn');
+    const btnText = submitBtn?.querySelector('.btn-text');
+    const btnLoading = submitBtn?.querySelector('.btn-loading');
 
-    if (submitBtn)  submitBtn.disabled = true;
-    if (btnText)    btnText.hidden     = true;
-    if (btnLoading) btnLoading.hidden  = false;
+    if (submitBtn) submitBtn.disabled = true;
+    if (btnText) btnText.hidden = true;
+    if (btnLoading) btnLoading.hidden = false;
 
     try {
-      const data = new FormData(form);
+      const formData = new FormData(form);
       const res = await fetch('https://formspree.io/f/mlgojawz', {
         method: 'POST',
-        body: data,
+        body: formData,
         headers: { Accept: 'application/json' }
       });
 
-      if (btnText)    btnText.hidden     = false;
-      if (btnLoading) btnLoading.hidden  = true;
-      if (submitBtn)  submitBtn.disabled = false;
+      if (btnText) btnText.hidden = false;
+      if (btnLoading) btnLoading.hidden = true;
+      if (submitBtn) submitBtn.disabled = false;
 
       if (res.ok) {
         if (formSuccess) {
           formSuccess.hidden = false;
+          formSuccess.style.display = 'flex';
           form.reset();
-          setTimeout(() => { formSuccess.hidden = true; }, 6000);
+          setTimeout(() => {
+            formSuccess.hidden = true;
+            formSuccess.style.display = 'none';
+          }, 6000);
         }
       } else {
         alert('Failed to send message. Please try again.');
       }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      if (btnText)    btnText.hidden     = false;
-      if (btnLoading) btnLoading.hidden  = true;
-      if (submitBtn)  submitBtn.disabled = false;
-      alert('Error sending message. Please try again.');
+    } catch (err) {
+      console.error('Form submission error:', err);
+      if (btnText) btnText.hidden = false;
+      if (btnLoading) btnLoading.hidden = true;
+      if (submitBtn) submitBtn.disabled = false;
+      alert('An error occurred while sending the message. Please try again.');
     }
   });
 })();
 
-/* ══════════════════════════════════════════
+/* ═════════════════════════════════════════════════════════════════════
    FOOTER YEAR
-══════════════════════════════════════════ */
+   ═════════════════════════════════════════════════════════════════════ */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-/* ══════════════════════════════════════════
-   SMOOTH ANCHOR CLICKS (extra safety)
-══════════════════════════════════════════ */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-/* ══════════════════════════════════════════
-   CURSOR GLOW EFFECT (desktop only)
-══════════════════════════════════════════ */
-(function initCursorGlow() {
-  if (window.matchMedia('(pointer: coarse)').matches) return; // skip on touch
-
-  const glow = document.createElement('div');
-  glow.style.cssText = `
-    position: fixed; pointer-events: none; z-index: 9999;
-    width: 320px; height: 320px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,200,255,0.045) 0%, transparent 65%);
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease;
-    top: 0; left: 0;
-    opacity: 0;
-  `;
-  document.body.appendChild(glow);
-
-  let raf;
-  let cx = 0, cy = 0;
-
-  document.addEventListener('mousemove', e => {
-    cx = e.clientX;
-    cy = e.clientY;
-    glow.style.opacity = '1';
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      glow.style.left = cx + 'px';
-      glow.style.top  = cy + 'px';
-    });
-  });
-
-  document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
-})();
